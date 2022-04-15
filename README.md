@@ -159,7 +159,11 @@ server.on('close', () => {
 
 server.listen({
   // Optionally specify port and/or address for each server:
-  udp: { port: 5333 }
+  udp: { 
+    port: 5333,  // Optional
+    address: "127.0.0.1", // Optional
+    type: "udp4",  // Optional, "udp4" or "udp6"
+  }
 });
 
 // eventually
